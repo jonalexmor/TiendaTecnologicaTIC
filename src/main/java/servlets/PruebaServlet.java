@@ -33,13 +33,16 @@ public class PruebaServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            String id = request.getParameter("id");
+            String name = request.getParameter("name");
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet PruebaServlet</title>");            
+            out.println("<title>Pruebas Tienda Tecnologia TIC</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet PruebaServlet at " + request.getContextPath() + "</h1>");
+            response.getWriter().append("El id que fue recibido es: "+id+" y el nombre del dispositivo es: "+ name);
             out.println("</body>");
             out.println("</html>");
         }
