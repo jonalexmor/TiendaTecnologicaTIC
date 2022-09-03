@@ -9,7 +9,7 @@ import java.sql.Statement;
 public class OperacionesBD {
 
     public static void main(String[] args) {
-        actualizarArticulo(10, "Perifericos");
+        actualizarArticulo(10, "PERIFERICOS");
         listarArticulo();
 
     }
