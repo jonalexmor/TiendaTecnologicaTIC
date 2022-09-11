@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="js/index.js"></script>
 
     <title>Inicio | Tienda Tecnología TIC</title>
     <link rel="shortcut icon" href="img/hardware.png">
@@ -31,75 +32,49 @@
       <span class="site-heading-lower">Tienda Tecnología TIC</span>
     </h1>
 
-    <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.html">Tienda Tecnología TIC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.html">Historia</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="services.html">Servicios</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="store.html">Visítanos</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="contact.html">Contacto</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
     <!-- Cabecera -->
     <section class="page-section clearfix">
       <div class="container">
         <div class="intro">
-          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/intro.jpg" alt="">
+          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/login.jpg" alt="">
           <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Déjate sorprender</span>
-              <span class="section-heading-lower">Tu negocio lo agradecerá</span>
-            </h2>
-            <p class="mb-3">Trabajamos sólo con los mejores articulos. Una vez los pruebes, nuestro negocio será lel mejor aliado para tu negocio.
+            <h1 class="section-heading mb-4">
+              <span class="section-heading-upper">Bienvenido</span>
+              <span class="section-heading-upper">Inicia sesión para continuar</span>
+            </h1>
+          
+              <div class="card my-5">
+                  <div class="card-body"> 
+                      <div class="row m-1">
+                          <div class="col-xl-10">
+                              
+                              <form id="form-login">
+                                  <div class="form-group">
+                                      <input type="text" class="form-control" id="usuario" placeholder="Usuario" required>
+                                  </div>
+                                  <br>
+                                  <div class="form-group">
+                                      <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required>
+                                  </div>
+                                  <button type="submit" class="btn btn-primary btn-block" id="BTNENTRAR">Entrar</button>
+                                  <hr>
+                              </form>
+                          </div>
+                      </div>
+                      <a href="register.html">¿Aún no tienes cuenta? Registrarme</a>
+                      <div id="login-error" class="alert alert-danger d-none" role="alert">Usuario o contraseña incorrectos</div>
+                  </div>
+              
+          
+            
+            <p class="mb-3">Registrate y cuenta con el mejor aliado para tu negocio.
             </p>
-            <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="store.html">Visítanos</a>
-            </div>
+            
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Mensaje -->
-    <section class="page-section cta">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">Compromiso total</span>
-                <span class="section-heading-lower">Garantizado</span>
-              </h2>
-              <p class="mb-0">Trabajamos con los mejores proveedores lo cual garantiza que los artículos cuentan con la mayor calidad para ofrecer a tu negocio las mejores opciones.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    
     <!-- Pié de página -->
     <footer class="footer text-faded text-center py-5">
       <div class="container">
