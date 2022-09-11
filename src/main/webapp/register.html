@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 
-    <title>Historia | Tienda Tecnología TIC PRUEBA</title>
+    <title>Contacto | Tienda Tecnología TIC</title>
     <link rel="shortcut icon" href="img/hardware.png">
 
     <!-- Bootstrap -->
@@ -31,33 +33,7 @@
       <span class="site-heading-lower">Tienda Tecnología TIC</span>
     </h1>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="index.html">Tienda Tecnología TIC</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio</a>
-            </li>
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.html">Historia</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="services.html">Servicios</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="store.html">Visítanos</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="contact.html">Contacto</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
-            </li>
+
           </ul>
         </div>
       </div>
@@ -65,17 +41,59 @@
 
     <section class="page-section about-heading">
       <div class="container">
-        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/contact.jpg" alt="">
         <div class="about-heading-content">
           <div class="row">
             <div class="col-xl-9 col-lg-10 mx-auto">
               <div class="bg-faded rounded p-5">
                 <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">El aliado de su negocio</span>
-                  <span class="section-heading-lower">Nuestra historia</span>
+                  <span class="section-heading-upper">Seamos amigos</span>
+                  <span class="section-heading-lower">Registro</span>
                 </h2>
-                <p>Fundada en 2022 nace con motivo de un proyecto realizado en misión TIC y la idea se desarrolló hasta hacerse una realizad. </p>
-                <p>Hoy en día se manejan clientes a nivel nacional e internacional quienes acuden a nosotros como su proveedor de confianza.</p>
+
+                <!-- Formulario de contacto -->
+                <form id="form-register" class="pb-4">
+                  <div class="form-group">
+                      <label for="input-username">Nombre de usuario</label>
+                      <input type="text" class="form-control" id="input-username" placeholder="Nombre de usuario" required>
+                  </div>
+                  <div class="form-row">
+                      <div class="form-group col-md-6">
+                          <label for="input-contrasena">Contraseña</label>
+                          <input type="password" class="form-control" id="input-contrasena" placeholder="Contraseña" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                          <label for="input-contrasena-repeat">Repetir contraseña</label>
+                          <input type="password" class="form-control" id="input-contrasena-repeat" placeholder="Repetir contraseña" required>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="input-nombre">Nombre</label>
+                      <input type="text" class="form-control" id="input-nombre" placeholder="Nombre" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="input-apellidos">Apellidos</label>
+                      <input type="text" class="form-control" id="input-apellidos" placeholder="Apellidos" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="input-email">Email</label>
+                      <input type="text" class="form-control" id="input-email" placeholder="Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Tipo de usuario</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione una opción</option>
+                      <option value="1">Alquiler</option>
+                      <option value="2">Leasing</option>
+                      <option value="3">Nuevo</option>
+                    </select>
+                    </select>
+                  </div>
+                  
+                  <input type="submit" class="btn btn-primary" id="register-btn" value="Registrar usuario" />
+              </form>
+                <!-- Fin formulario de contacto -->
+
               </div>
             </div>
           </div>
@@ -122,4 +140,5 @@
   </body>
 
 </html>
+
 
