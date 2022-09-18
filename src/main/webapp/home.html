@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+              integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+              crossorigin="anonymous" />
+
+        <script src="js/main.js"></script>
+        <link rel="stylesheet" href="css/main.css" />
+        <link href="css/business-casual.css" rel="stylesheet">
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+        <title>Pedidos | Tienda Tecnología TIC</title>
+        <link rel="shortcut icon" href="img/hardware.png">
+
+    </head>
+    <body>
+        <h1 class="site-heading text-center text-white d-none d-lg-block">
+            <span class="site-heading-upper text-warning mb-3">La mejor opción para su negocio</span>
+            <span class="site-heading-lower">Tienda Tecnología TIC</span>
+        </h1>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="login.html">Tienda Tecnología TIC</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="about.html">Historia</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="services.html">Servicios</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="store.html">Visítanos</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item px-lg-4">
+                            <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item active px-lg-4">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary dropdown-toggle"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span id="ajustes">Ajustes </span>
+                                </button>
+                                <div class="dropdown-menu" id="main-menu">
+                                    <a id="mi-perfil-btn" class="dropdown-item">Mi perfil</a>
+                                    <a id="salir-btn" class="dropdown-item" href="login.html">Salir</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 mx-auto">
+                        <div class="cta-inner text-center rounded">
+                            <main class="p-4 d-flex justify-content-center">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col" id="ordenar-categoria" data-toogle="tooltip" 
+                                                data-placement="top" title="Ordenar por categoria">Categoría
+                                                <span class="fas fa-sort" id="icono-ordenar"></span></th>
+                                            <th scope="col">Tipo</th>
+                                            <th scope="col">Servicio</th>
+                                            <th scope="col">Fecha Adquisición</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="articulos-tbody">
+
+                                    </tbody>
+                                </table>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer text-faded text-center py-5">
+                <div class="container">
+                    <p class="m-0">
+                        <a href="https://twitter.com/?lang=es" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="https://es-la.facebook.com/" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                        <a href="https://www.instagram.com/" class="link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </p>
+                    <p class="m-0 mbt">
+                        <a href="..." class="link">Política de privacidad</a> ·
+                        <a href="..." class="link">Aviso legal</a> ·
+                        <a href="..." class="link">Cookies</a>
+                    </p>
+                    <p class="m-0 mbt1">&copy; Tienda Tecnologica TIC 2022</p>
+                </div>
+            </footer>
+            <script src="vendor/jquery/jquery.min.js"></script>
+
+
+    </body>
+</html>

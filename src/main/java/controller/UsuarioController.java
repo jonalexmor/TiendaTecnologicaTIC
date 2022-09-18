@@ -6,6 +6,7 @@ import beans.Usuario;
 import connection.DBConnection;
 
 public class UsuarioController implements IUsuarioController{
+    
 
         @Override
 	public String login(String username, String contrasena) {	
@@ -38,4 +39,34 @@ public class UsuarioController implements IUsuarioController{
 		
 		return "false";
 	}
+        @Override
+    public String register(String username, String contrasena, String nombre, String apellidos, String email,
+            String tipo_cliente) {
+        
+
+        Gson gson = new Gson();
+
+        DBConnection con = new DBConnection();
+        String sql = "Insert into usuarios values('" + username + "', '" + contrasena + "', '" + nombre
+                + "', '" + apellidos + "', '" + email + "', " + tipo_cliente + ")";
+
+        try {
+            Statement st = con.getConnection().createStatement();
+            st.executeUpdate(sql);
+
+            Usuario usuario = new Usuario(username, contrasena, nombre, apellidos, email, tipo_cliente);
+
+            st.close();
+
+            return gson.toJson(usuario);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+
+        } finally {
+            con.desconectar();
+        }
+
+        return "false";
+
+    }
 }
